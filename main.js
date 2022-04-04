@@ -32,5 +32,30 @@ let currentImgIndex = 1;
 
 setInterval(() => {
 	header.style.backgroundImage = `url(\"http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/slide${currentImgIndex}.jpg\")`;
+
+	switch (currentImgIndex) {
+		case 1:
+			headerH1.innerHTML = "Book your stay";
+			headerH2.innerHTML = "$10";
+			headerH3[1].innerHTML = "per night";
+			break;
+
+		case 2:
+			headerH1.innerHTML = "Plan trips ahead";
+			headerH2.innerHTML = "$20";
+			headerH3[1].innerHTML = "a day";
+			break;
+
+		case 3:
+			headerH1.innerHTML = "Save cash for fun";
+			headerH2.innerHTML = "$30";
+			break;
+
+		case 4:
+			headerH1.innerHTML = "Only for you";
+			headerH2.innerHTML = "$10";
+			headerH3[1].innerHTML = "per night";
+	}
+	console.log(currentImgIndex);
 	currentImgIndex += currentImgIndex < 4 ? 1 : -3;
-}, 5000);
+}, 10000);

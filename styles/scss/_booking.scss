@@ -1,0 +1,88 @@
+.booking {
+	background-color: #8abb6a;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 240px;
+
+	h2 {
+		color: #fff;
+		font-family: "Sansita One", "Sansita", sans-serif;
+		font-size: 45px;
+		font-weight: 400;
+	}
+}
+
+.btn-group {
+	display: flex;
+	column-gap: 10px;
+
+	* {
+		width: 151.16px;
+		text-transform: uppercase;
+		font-family: "Oswald", sans-serif;
+		color: #928f88;
+		padding: 14.4px 16.8px 14.4px 27.6px;
+		height: 71.39px;
+		font-weight: 700;
+		font-size: 12px;
+		letter-spacing: 2px;
+		border: none;
+		outline: 1px solid transparent;
+		transition: outline 0.2s;
+	}
+
+	input {
+		&:hover,
+		&:focus {
+			outline: 2px solid #ffdb74;
+		}
+	}
+
+	select {
+		-webkit-appearance: none;
+
+		&:hover,
+		&:focus {
+			outline: 2px solid #ffdb74;
+		}
+	}
+
+	button {
+		width: max-content;
+		letter-spacing: 0;
+		padding: 19.2px 31.2px 16.8px;
+		background-image: linear-gradient(to right, #ffdb74 50%, #444349 50%);
+		background-position: right;
+		background-size: 300%;
+		color: #fff;
+		cursor: pointer;
+		transition: background-position 0.5s;
+
+		&:hover {
+			background-position: left;
+		}
+	}
+}
+
+.selection {
+	position: relative;
+	padding: 0;
+
+	&::after {
+		content: "▼";
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 80%;
+		transform: translate(-80%, -50%);
+		font-size: 10px;
+		background-color: #ffdb74;
+		color: #444349;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		font-weight: 900;
+	}
+}

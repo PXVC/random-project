@@ -14,7 +14,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=PT+Serif&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=PT+Serif&family=Sansita:ital,wght@1,700&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -28,7 +28,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 		/>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="styles/css/style.css" />
 		<title>CityHostel</title>
 	</head>
 	<body>
@@ -65,33 +65,82 @@
 			<div class="price-msg">
 				<h3 class="animate__fadeInLeft">from</h3>
 				<h2 class="animate__fadeInUp" id="prices">$10</h2>
-				<h3 class="animate__fadeInRight" id="day-night">a day</h3>
+				<h3 class="animate__fadeInRight" id="day-night">per night</h3>
 			</div>
-			<a href="#" class="animate__backInRight">book today!</a>
+			<a
+				href="http://cityhostel.axiomthemes.com/appointment/"
+				target="_blank"
+				class="animate__backInRight"
+				>book today!</a
+			>
 		</header>
-		<!-- <h1>Hahaha</h1> -->
+		<section class="booking">
+			<h2>book your stay!</h2>
+			<div class="btn-group">
+				<input type="date" name="check in" id="date-input" />
+				<span class="selection">
+					<select name="nights" id="nights-input">
+						<option value="title">NIGHTS</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+					</select>
+				</span>
+				<span class="selection">
+					<select name="guests" id="guest-input">
+						<option value="title">GUESTS</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</span>
+				<button class="btn" id="book-btn">check availability</button>
+			</div>
+		</section>
 		<section class="intro">
 			<img
+				class="intro-bg"
 				src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/bg_hello.jpg?id=278"
 				alt=""
 			/>
-			<div class="Bonk">
-				<h1>Hello!</h1>
-				<h4>Welcome to our Hotel home page</h4>
-			</div>
-			<img
-				src="http://cityhostel.axiomthemes.com/wp-content/uploads/2019/01/badge.png"
-				alt=""
-			/>
-			<div class="Benk">
-				<p>
-					Our hostel is located in the citys finest and trendiest district.
-					Everyone who is interested in being a part of the creative and
-					cutting-edge world that is New York, you are welcome to CityHostel for
-					the best experience.
-				</p>
+			<div class="content-wrapper">
+				<div class="content">
+					<h1>Hello!</h1>
+					<h4>welcome there!</h4>
+					<p>
+						Our hostel is located in the city's finest and trendiest district.
+						Everyone who is interested in being a part of the creative and
+						cutting-edge world that is New York, you are welcome to CityHostel
+						for the best experience.Our hostel is located in the citys finest
+						and trendiest district. Everyone who is interested in being a part
+						of the creative and cutting-edge world that is New York, you are
+						welcome to CityHostel for the best experience.
+					</p>
+				</div>
+				<img
+					class="badge"
+					src="http://cityhostel.axiomthemes.com/wp-content/uploads/2019/01/badge.png"
+					alt=""
+				/>
+				<a href="#" id="info-btn" class="btn-info">More about us</a>
 			</div>
 		</section>
+		<div class="empty">
+			<h1 class="Down">Guest say</h1>
+			<img
+				class="Up"
+				src="https://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/guest-325x325.jpg"
+				alt=""
+			/>
+			<h6>SAMANTHA GREENWILD , NYC</h6>
+		</div>
 		<script src="main.js"></script>
 	</body>
 </html>

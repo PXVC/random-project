@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 200vh;
+}
+
+.nav,
+.info,
+.address,
+.tel,
+h3 {
+	display: flex;
+	align-items: center;
+}
+
+.heading {
+	font: 72.8px "Sansita One", "Sansita", sans-serif;
+	color: #fd7444;
+
+	&--white {
+		color: #fff;
+	}
+}
+.section {
+	background-color: #fff;
+
+	&--green-bg {
+		background-color: #8abb6a;
+	}
+	h4 {
+		font: 700 12px "Oswald", sans-serif;
+		letter-spacing: 4.8px;
+		text-transform: uppercase;
+		color: #928f88;
+	}
+}
+
+[class^="animate"] {
+	animation-duration: 0.7s;
+}

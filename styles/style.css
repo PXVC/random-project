@@ -1,0 +1,430 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 200vh;
+}
+
+.nav,
+.info,
+.address,
+.tel,
+h3 {
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font: 72.8px "Sansita One", "Sansita", sans-serif;
+  color: #fd7444;
+}
+.heading--white {
+  color: #fff;
+}
+
+.section {
+  background-color: #fff;
+}
+.section--green-bg {
+  background-color: #8abb6a;
+}
+.section h4 {
+  font: 700 12px "Oswald", sans-serif;
+  letter-spacing: 4.8px;
+  text-transform: uppercase;
+  color: #928f88;
+}
+
+[class^=animate] {
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  max-height: 100px;
+  min-height: 100px;
+  padding: 20px 0;
+}
+
+.nav {
+  justify-content: space-around;
+  background-color: #fff;
+  width: inherit;
+  height: 70px;
+}
+
+.nav.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+  padding: 0;
+  height: 70px;
+}
+
+.nav.sticky img {
+  width: 12%;
+}
+
+.nav img {
+  width: 15%;
+  height: auto;
+}
+
+.info {
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  font-size: 14px;
+}
+
+.address,
+.address h3,
+.tel,
+.tel h3 {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+.address p {
+  font-family: "PT Serif", serif;
+  color: #928f88;
+}
+
+i:not(:last-child),
+.tel p {
+  color: #ffdb74;
+}
+
+.menu-btn {
+  font-size: 29px;
+  background-color: #444349;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #ffdb74;
+  color: #444349;
+}
+
+.menu-btn:focus-visible {
+  outline: 1px auto blue;
+}
+
+header {
+  background: url("http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/slide1.jpg") center/100% no-repeat;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 60px;
+  padding-left: 80px;
+}
+
+header h1 {
+  font: 98px "Sansita One", "Sansita", sans-serif;
+  min-width: 350px;
+  max-width: 510px;
+  color: #fff;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.price-msg {
+  display: flex;
+  align-items: center;
+  height: 10px;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.price-msg * {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.price-msg h3 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 5.9px;
+}
+
+.price-msg h2 {
+  color: #fd7444;
+  font-weight: 400;
+  font-size: 49px;
+  margin-right: 17px;
+}
+
+header a {
+  background-color: #ffdb74;
+  color: #444349;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  padding: 23.1px 58.1px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  opacity: 0;
+  transition: background-color 0.3s, color 0.3s, outline 0.3s;
+  -webkit-animation-duration: 1.5s !important;
+          animation-duration: 1.5s !important;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+header a:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.booking {
+  background-color: #8abb6a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 240px;
+}
+.booking h2 {
+  color: #fff;
+  font-family: "Sansita One", "Sansita", sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.btn-group {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.btn-group * {
+  width: 151.16px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: #928f88;
+  padding: 14.4px 16.8px 14.4px 27.6px;
+  height: 71.39px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border: none;
+  outline: 1px solid transparent;
+  transition: outline 0.2s;
+}
+.btn-group input:hover, .btn-group input:focus {
+  outline: 2px solid #ffdb74;
+}
+.btn-group select {
+  -webkit-appearance: none;
+}
+.btn-group select:hover, .btn-group select:focus {
+  outline: 2px solid #ffdb74;
+}
+.btn-group button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  letter-spacing: 0;
+  padding: 19.2px 31.2px 16.8px;
+  background-image: linear-gradient(to right, #ffdb74 50%, #444349 50%);
+  background-position: right;
+  background-size: 300%;
+  color: #fff;
+  cursor: pointer;
+  transition: background-position 0.5s, color 0.5s;
+}
+.btn-group button:hover {
+  background-position: left;
+  color: #444349;
+}
+
+.selection {
+  position: relative;
+  padding: 0;
+}
+.selection::after {
+  content: "▼";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-80%, -50%);
+  font-size: 10px;
+  background-color: #ffdb74;
+  color: #444349;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 900;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  background-color: #f7f5f2;
+}
+
+.intro-bg {
+  transform: translateX(-30%);
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  padding: 50px;
+  color: #928f88;
+}
+
+.content {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.content h4 {
+  margin-top: 13.2px;
+  margin-bottom: 27.3px;
+}
+.content p {
+  font: 14px "PT Serif", serif;
+  line-height: 24.01px;
+}
+
+.badge {
+  margin-left: 20px;
+}
+
+.btn-info {
+  transform: translate(-400px, 550px);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font: 700 12px "Oswald", sans-serif;
+  letter-spacing: 3px;
+  padding: 25.8px 78px 27.6px;
+  background: linear-gradient(to right, #ffdb74 50%, #444349 50%) right/300%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: background-position 0.7s, color 0.7s;
+}
+.btn-info:hover {
+  background-position: left;
+  color: #444349;
+}
+
+.rooms {
+  text-align: center;
+  margin-top: 130px;
+}
+.rooms__group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  grid-template-rows: auto;
+  justify-items: center;
+  margin: 70px 70px 130px;
+}
+
+.room {
+  background-color: #f7f5f2;
+}
+.room img {
+  width: 100%;
+}
+.room__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15.2px;
+  justify-content: center;
+  align-items: center;
+  padding: 54.6px 81.2px 61.6px;
+  font: 400 14px "Oswald", sans-serif;
+}
+.room__content a {
+  text-decoration: none;
+}
+.room__content a:first-child {
+  color: #444349;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.room__content a:first-child:hover {
+  color: #fd7444;
+}
+.room__content a:last-child {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 18.6px 10.3px 17.4px;
+  background-image: linear-gradient(to right, #ffdb74 50%, #444349 50%);
+  background-position: right;
+  background-size: 300%;
+  color: #fff;
+  cursor: pointer;
+  transition: background-position 0.6s, color 0.6s;
+}
+.room__content a:last-child:hover {
+  background-position: left;
+  color: #444349;
+}
+.room__content h3 {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  line-height: 18.9px;
+  max-width: 100px;
+  text-align: right;
+  color: #928f88;
+}
+
+.price-wrapper {
+  display: flex;
+}
+
+.price {
+  color: #fd7444;
+  font-weight: 400;
+  font-size: 35px;
+  margin-left: 10px;
+}/*# sourceMappingURL=style.css.map */

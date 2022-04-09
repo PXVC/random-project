@@ -1,0 +1,81 @@
+.nav-wrapper {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 100vw;
+	max-height: 100px;
+	min-height: 100px;
+	padding: 20px 0;
+}
+
+.nav {
+	justify-content: space-around;
+	background-color: #fff;
+	width: inherit;
+	height: 70px;
+}
+
+.nav.sticky {
+	position: fixed;
+	top: 0;
+	z-index: 999999;
+	padding: 0;
+	height: 70px;
+}
+
+.nav.sticky img {
+	width: 12%;
+}
+
+.nav img {
+	width: 15%;
+	height: auto;
+}
+
+.info {
+	justify-content: center;
+	column-gap: 20px;
+	font-size: 14px;
+}
+
+.address,
+.address h3,
+.tel,
+.tel h3 {
+	column-gap: 10px;
+}
+
+h3 {
+	font-family: "Oswald", sans-serif;
+}
+
+.address p {
+	font-family: "PT Serif", serif;
+	color: #928f88;
+}
+
+i:not(:last-child),
+.tel p {
+	color: #ffdb74;
+}
+
+.menu-btn {
+	font-size: 29px;
+	background-color: #444349;
+	color: #fff;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-btn:hover {
+	background-color: #ffdb74;
+	color: #444349;
+}
+
+.menu-btn:focus-visible {
+	outline: 1px auto blue;
+}

@@ -28,7 +28,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 		/>
-		<link rel="stylesheet" href="styles/css/style.css" />
+		<link rel="stylesheet" href="styles/style.css" />
 		<title>CityHostel</title>
 	</head>
 	<body>
@@ -74,7 +74,7 @@
 				>book today!</a
 			>
 		</header>
-		<section class="booking">
+		<section class="section section--green-bg booking">
 			<h2>book your stay!</h2>
 			<div class="btn-group">
 				<input type="date" name="check in" id="date-input" />
@@ -104,7 +104,7 @@
 				<button class="btn" id="book-btn">check availability</button>
 			</div>
 		</section>
-		<section class="intro">
+		<section class="section intro">
 			<img
 				class="intro-bg"
 				src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/bg_hello.jpg?id=278"
@@ -112,7 +112,7 @@
 			/>
 			<div class="content-wrapper">
 				<div class="content">
-					<h1>Hello!</h1>
+					<h1 class="heading">Hello!</h1>
 					<h4>welcome there!</h4>
 					<p>
 						Our hostel is located in the city's finest and trendiest district.
@@ -129,18 +129,98 @@
 					src="http://cityhostel.axiomthemes.com/wp-content/uploads/2019/01/badge.png"
 					alt=""
 				/>
-				<a href="#" id="info-btn" class="btn-info">More about us</a>
+				<a
+					href="http://cityhostel.axiomthemes.com/about-style-1/"
+					id="info-btn"
+					class="btn-info"
+					>More about us</a
+				>
 			</div>
 		</section>
-		<div class="empty">
-			<h1 class="Down">Guest say</h1>
+		<section class="section rooms">
+			<h1 class="heading">Rooms</h1>
+			<h4>more accommodations</h4>
+			<div class="rooms__group">
+				<div class="room">
+					<div class="room__img-wrapper">
+						<img
+							src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/room-9-740x566.jpg"
+							alt="12-16 bed mixed dorm"
+						/>
+					</div>
+					<div class="room__content">
+						<a
+							href="http://cityhostel.axiomthemes.com/services/12-16-bed-mixed-dorm/"
+							class="room__name"
+							>12-16 bed mixed dorm</a
+						>
+						<div class="price-wrapper">
+							<h3>per night from</h3>
+							<h2 class="price">$10</h2>
+						</div>
+						<a
+							href="http://cityhostel.axiomthemes.com/services/12-16-bed-mixed-dorm/"
+							>more info</a
+						>
+					</div>
+				</div>
+				<div class="room">
+					<div class="room__img-wrapper">
+						<img
+							src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/room-8-740x566.jpg"
+							alt="10 bed mixed dorm"
+						/>
+					</div>
+					<div class="room__content">
+						<a
+							href="http://cityhostel.axiomthemes.com/services/10-bed-mixed-dorm/"
+							class="room__name"
+							>10 bed mixed dorm</a
+						>
+						<div class="price-wrapper">
+							<h3>per night from</h3>
+							<h2 class="price">$10</h2>
+						</div>
+						<a
+							href="http://cityhostel.axiomthemes.com/services/10-bed-mixed-dorm/"
+							>more info</a
+						>
+					</div>
+				</div>
+				<div class="room">
+					<div class="room__img-wrapper">
+						<img
+							src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/room-4-740x566.jpg"
+							alt="double room (private)"
+						/>
+					</div>
+					<div class="room__content">
+						<a
+							href="http://cityhostel.axiomthemes.com/services/double-room-private/"
+							class="room__name"
+							>double room (private)</a
+						>
+						<div class="price-wrapper">
+							<h3>per night from</h3>
+							<h2 class="price">$30</h2>
+						</div>
+						<a
+							href="http://cityhostel.axiomthemes.com/services/double-room-private/"
+							>more info</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section--green-bg testimonials">
+			<h1 class="heading heading--white">Guest say</h1>
 			<img
 				class="Up"
 				src="https://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/guest-325x325.jpg"
 				alt=""
 			/>
 			<h6>SAMANTHA GREENWILD , NYC</h6>
-		</div>
+		</section>
 		<script src="main.js"></script>
 	</body>
 </html>

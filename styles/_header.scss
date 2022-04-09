@@ -1,0 +1,72 @@
+header {
+	background: url("http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/slide1.jpg")
+		center / 100% no-repeat;
+	height: 100vh;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	row-gap: 60px;
+	padding-left: 80px;
+}
+
+header h1 {
+	font: 98px "Sansita One", "Sansita", sans-serif;
+	min-width: 350px;
+	max-width: 510px;
+	color: #fff;
+	animation-fill-mode: forwards;
+}
+
+.price-msg {
+	display: flex;
+	align-items: center;
+	height: 10px;
+	color: #fff;
+	font-family: "Oswald", sans-serif;
+	text-transform: uppercase;
+}
+
+.price-msg * {
+	animation-delay: 0.7s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+.price-msg h3 {
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 5.9px;
+}
+
+.price-msg h2 {
+	color: #fd7444;
+	font-weight: 400;
+	font-size: 49px;
+	margin-right: 17px;
+}
+
+header a {
+	background-color: #ffdb74;
+	color: #444349;
+	font-family: "Oswald", sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 3px;
+	padding: 23.1px 58.1px;
+	border: 2px solid #fff0;
+	opacity: 0;
+	transition: background-color 0.3s, color 0.3s, outline 0.3s;
+	animation-duration: 1.5s !important;
+	animation-delay: 1.4s;
+	animation-fill-mode: forwards;
+
+	&:hover {
+		background-color: transparent;
+		color: #fff;
+		border: 2px solid #fff;
+	}
+}

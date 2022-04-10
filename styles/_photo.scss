@@ -1,0 +1,18 @@
+.photo {
+	text-align: center;
+
+	&__gallery {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		justify-items: center;
+		align-items: start;
+	}
+
+	img {
+		width: 100%;
+
+		&:nth-child(4) {
+		}
+	}
+}

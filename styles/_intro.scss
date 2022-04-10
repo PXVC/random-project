@@ -2,11 +2,12 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 100%;
-	background-color: #f7f5f2;
+	background-color: $light-gray;
 }
 
 .intro-bg {
 	transform: translateX(-30%);
+	background-position: cover;
 }
 
 .content-wrapper {
@@ -17,7 +18,7 @@
 	position: absolute;
 	left: 50%;
 	padding: 50px;
-	color: #928f88;
+	color: $gray;
 }
 
 .content {
@@ -39,12 +40,13 @@
 }
 
 .btn-info {
-	transform: translate(-400px, 550px);
 	width: max-content;
+	margin-top: 80%;
+	transform: translateX(-130%);
 	font: 700 12px "Oswald", sans-serif;
 	letter-spacing: 3px;
 	padding: 25.8px 78px 27.6px;
-	background: linear-gradient(to right, #ffdb74 50%, #444349 50%) right / 300%;
+	background: linear-gradient(to right, $yellow 50%, $black 50%) right / 300%;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #fff;
@@ -53,6 +55,6 @@
 
 	&:hover {
 		background-position: left;
-		color: #444349;
+		color: $black;
 	}
 }

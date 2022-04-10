@@ -13,7 +13,7 @@
 }
 
 .room {
-	background-color: #f7f5f2;
+	background-color: $light-gray;
 
 	img {
 		width: 100%;
@@ -32,13 +32,13 @@
 			text-decoration: none;
 
 			&:first-child {
-				color: #444349;
+				color: $black;
 				font-size: 20px;
 				text-transform: uppercase;
 				transition: color 0.3s ease;
 
 				&:hover {
-					color: #fd7444;
+					color: $orange;
 				}
 			}
 
@@ -50,7 +50,7 @@
 				font-size: 12px;
 				font-weight: 700;
 				padding: 18.6px 10.3px 17.4px;
-				background-image: linear-gradient(to right, #ffdb74 50%, #444349 50%);
+				background-image: linear-gradient(to right, $yellow 50%, $black 50%);
 				background-position: right;
 				background-size: 300%;
 				color: #fff;
@@ -59,7 +59,7 @@
 
 				&:hover {
 					background-position: left;
-					color: #444349;
+					color: $black;
 				}
 			}
 		}
@@ -70,7 +70,7 @@
 			line-height: 18.9px;
 			max-width: 100px;
 			text-align: right;
-			color: #928f88;
+			color: $gray;
 		}
 	}
 }
@@ -80,7 +80,7 @@
 }
 
 .price {
-	color: #fd7444;
+	color: $orange;
 	font-weight: 400;
 	font-size: 35px;
 	margin-left: 10px;

@@ -9,13 +9,51 @@ body {
   margin: 0;
   padding: 0;
   min-height: 200vh;
+  overflow-x: hidden;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.btn-scroll-to-top {
+  position: fixed;
+  z-index: 10000000000000002000;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(to left, #444349 50%, #ffdb74 50%) right/300%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.btn-scroll-to-top:hover {
+  background-position: left;
+  color: #444349;
 }
 
 .nav,
 .info,
 .address,
 .tel,
-h3 {
+.price-msg {
   display: flex;
   align-items: center;
 }
@@ -41,9 +79,15 @@ h3 {
   color: #928f88;
 }
 
-[class^=animate] {
+.animate {
   -webkit-animation-duration: 0.7s;
           animation-duration: 0.7s;
+  opacity: 0;
+}
+
+.disable {
+  -webkit-animation: none;
+          animation: none;
 }
 
 .nav-wrapper {
@@ -62,7 +106,6 @@ h3 {
   width: inherit;
   height: 70px;
 }
-
 .nav.sticky {
   position: fixed;
   top: 0;
@@ -70,11 +113,9 @@ h3 {
   padding: 0;
   height: 70px;
 }
-
 .nav.sticky img {
   width: 12%;
 }
-
 .nav img {
   width: 15%;
   height: auto;
@@ -93,10 +134,6 @@ h3 {
 .tel h3 {
   -moz-column-gap: 10px;
        column-gap: 10px;
-}
-
-h3 {
-  font-family: "Oswald", sans-serif;
 }
 
 .address p {
@@ -131,8 +168,8 @@ i:not(:last-child),
 }
 
 header {
-  background: url("http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/slide1.jpg") center/100% no-repeat;
-  height: 100vh;
+  background: url("http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/slide1.jpg") center/cover no-repeat;
+  height: 85vh;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -297,6 +334,7 @@ header a:hover {
 
 .intro-bg {
   transform: translateX(-30%);
+  background-position: cover;
 }
 
 .content-wrapper {
@@ -329,10 +367,11 @@ header a:hover {
 }
 
 .btn-info {
-  transform: translate(-400px, 550px);
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  margin-top: 80%;
+  transform: translateX(-130%);
   font: 700 12px "Oswald", sans-serif;
   letter-spacing: 3px;
   padding: 25.8px 78px 27.6px;
@@ -427,4 +466,185 @@ header a:hover {
   font-weight: 400;
   font-size: 35px;
   margin-left: 10px;
+}
+
+.testimonials {
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding: 100px 0;
+}
+.testimonials h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  word-spacing: 3px;
+}
+.testimonials img {
+  border-radius: 50%;
+}
+.testimonials__score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+.testimonials__score h1 {
+  font: 70px "Oswald", sans-serif;
+  color: #fd7444;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 45px 55px;
+}
+.testimonials__content {
+  width: 429px;
+}
+.testimonials__content h3 {
+  color: #ffdb74;
+  letter-spacing: 2px;
+  margin: 50px 0 30px;
+}
+.testimonials__content p {
+  font: 20px "PT Serif", serif;
+  line-height: 28px;
+}
+
+.facilities {
+  text-align: center;
+  margin: 110px 0 200px;
+}
+.facilities__services-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.row {
+  display: flex;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+  align-content: center;
+}
+.row:last-child {
+  transform: translateY(70px);
+}
+.row__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  text-decoration: none;
+}
+.row__item i {
+  font-size: 54.6px;
+  background-color: #ffdb74;
+  width: 1.777em;
+  height: 1.777em;
+  padding-top: 0.4em;
+  text-align: center;
+  color: #444349;
+  border-radius: 50%;
+  transition: color 0.3s, background-color 0.3s;
+}
+.row__item i:hover {
+  color: #fff;
+  background-color: #444349;
+}
+.row__item p {
+  color: #444349;
+  text-decoration: none;
+  font: 700 14px "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  transition: color 0.3s ease;
+}
+
+.breakfast-feature {
+  background: url("http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/promo_bg.jpg?id=268") center/cover no-repeat;
+  height: 100vh;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.breakfast-feature__content {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 30px;
+}
+.breakfast-feature h1 {
+  font-size: 100px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.breakfast-feature h2 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4.8px;
+}
+.breakfast-feature h2 span {
+  color: #ffdb74;
+}
+.breakfast-feature div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fd7444;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+}
+.breakfast-feature div:last-child p {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4.8px;
+}
+.breakfast-feature div:last-child h4 {
+  font-size: 35px;
+  font-weight: 400;
+  color: #ffdb74;
+}
+
+.btn-book {
+  background: linear-gradient(to left, #ffdb74 50%, transparent 50%) right;
+  background-size: 201%;
+  color: #444349;
+  text-decoration: none;
+  padding: 25px 78px 27px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border: 2px solid #ffdb74;
+  box-sizing: content-box;
+  transition: color 0.3s, background-position 0.3s;
+}
+.btn-book:hover {
+  background-position: left;
+  color: #ffdb74;
+}
+
+.photo {
+  text-align: center;
+}
+.photo__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: start;
+}
+.photo img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

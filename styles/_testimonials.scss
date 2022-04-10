@@ -1,0 +1,48 @@
+.testimonials {
+	color: #fff;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	column-gap: 50px;
+	padding: 100px 0;
+
+	h3 {
+		font-size: 14px;
+		text-transform: uppercase;
+		word-spacing: 3px;
+	}
+
+	img {
+		border-radius: 50%;
+	}
+
+	&__score {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+
+		h1 {
+			font: 70px "Oswald", sans-serif;
+			color: $orange;
+			background-color: #fff;
+			border-radius: 50%;
+			padding: 45px 55px;
+		}
+	}
+
+	&__content {
+		width: 429px;
+
+		h3 {
+			color: $yellow;
+			letter-spacing: 2px;
+			margin: 50px 0 30px;
+		}
+
+		p {
+			font: 20px "PT Serif", serif;
+			line-height: 28px;
+		}
+	}
+}

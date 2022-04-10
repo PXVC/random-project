@@ -1,7 +1,7 @@
 header {
 	background: url("http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/slide1.jpg")
-		center / 100% no-repeat;
-	height: 100vh;
+		center / cover no-repeat;
+	height: 85vh;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
@@ -41,15 +41,15 @@ header h1 {
 }
 
 .price-msg h2 {
-	color: #fd7444;
+	color: $orange;
 	font-weight: 400;
 	font-size: 49px;
 	margin-right: 17px;
 }
 
 header a {
-	background-color: #ffdb74;
-	color: #444349;
+	background-color: $yellow;
+	color: $black;
 	font-family: "Oswald", sans-serif;
 	font-weight: 700;
 	font-size: 14px;

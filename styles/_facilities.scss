@@ -1,0 +1,55 @@
+.facilities {
+	text-align: center;
+	margin: 110px 0 200px;
+
+	&__services-group {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin-top: 50px;
+	}
+}
+
+.row {
+	display: flex;
+	column-gap: 70px;
+	align-content: center;
+
+	&:last-child {
+		transform: translateY(70px);
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+		text-decoration: none;
+
+		i {
+			font-size: 54.6px;
+			background-color: $yellow;
+			width: 1.777em;
+			height: 1.777em;
+			padding-top: 0.4em;
+			text-align: center;
+			color: $black;
+			border-radius: 50%;
+			transition: color 0.3s, background-color 0.3s;
+
+			&:hover {
+				color: #fff;
+				background-color: $black;
+			}
+		}
+
+		p {
+			color: $black;
+			text-decoration: none;
+			font: 700 14px "Oswald", sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 0.6px;
+			transition: color 0.3s ease;
+		}
+	}
+}

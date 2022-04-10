@@ -1,6 +1,18 @@
+// Color
+$black: #444349;
+$orange: #fd7444;
+$yellow: #ffdb74;
+$light-gray: #f7f5f2;
+$gray: #928f88;
+$green: #8abb6a;
+
 @import "general";
 @import "nav";
 @import "header";
 @import "booking";
-@import "hello";
+@import "intro";
 @import "rooms";
+@import "testimonials";
+@import "facilities";
+@import "breakfast-feature";
+@import "photo";

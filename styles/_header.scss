@@ -16,7 +16,6 @@ header h1 {
 	min-width: 350px;
 	max-width: 510px;
 	color: #fff;
-	animation-fill-mode: forwards;
 }
 
 .price-msg {
@@ -29,8 +28,7 @@ header h1 {
 }
 
 .price-msg * {
-	animation-delay: 0.7s;
-	animation-fill-mode: forwards;
+	animation-delay: 1s;
 	opacity: 0;
 }
 
@@ -60,10 +58,9 @@ header a {
 	border: 2px solid #fff0;
 	opacity: 0;
 	transition: background-color 0.3s, color 0.3s, outline 0.3s;
-	animation-duration: 1.5s !important;
-	animation-delay: 1.4s;
-	animation-fill-mode: forwards;
-
+	animation-duration: 1.4s !important;
+	animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+	animation-delay: 2s;
 	&:hover {
 		background-color: transparent;
 		color: #fff;

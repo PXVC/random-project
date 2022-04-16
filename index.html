@@ -28,8 +28,13 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 		/>
+		<link
+			rel="shortcut icon"
+			href="https://cityhostel.axiomthemes.com/wp-content/uploads/2017/03/hostel_fav.png"
+			type="image/x-icon"
+		/>
 		<link rel="stylesheet" href="styles/style.css" />
-		<title>CityHostel</title>
+		<title>CityHostel Hostel - Your feeling choose your room</title>
 	</head>
 	<body>
 		<div class="loader" id="loader">
@@ -38,9 +43,10 @@
 				alt="loader"
 			/>
 		</div>
-		<button class="btn-scroll-to-top">
+		<!-- set href property of the a tag to "#" to go to the top of the page -->
+		<a href="#" class="btn-scroll-to-top">
 			<i class="fa-solid fa-angle-up"></i>
-		</button>
+		</a>
 		<div class="nav-wrapper">
 			<nav class="nav" id="nav">
 				<img
@@ -70,9 +76,7 @@
 			</nav>
 		</div>
 		<header>
-			<h1 class="animate disable disable animate__fadeInDown">
-				Book your stay
-			</h1>
+			<h1 class="animate disable animate__fadeInDown">Book your stay</h1>
 			<div class="price-msg">
 				<h3 class="animate disable animate__fadeInLeft">from</h3>
 				<h2 class="animate disable animate__fadeInUp" id="prices">$10</h2>
@@ -83,7 +87,7 @@
 			<a
 				href="http://cityhostel.axiomthemes.com/appointment/"
 				target="_blank"
-				class="animate disable animate__backInRight"
+				class="animate disable animate__fadeInRightBig"
 				>book today!</a
 			>
 		</header>
@@ -339,9 +343,9 @@
 		<section class="section breakfast-feature">
 			<div class="breakfast-feature__content">
 				<h1 class="heading heading--white">Bed & Breakfast</h1>
-				<h2 class="breakfast-feature__slogan">
+				<h4 class="breakfast-feature__slogan">
 					order breakfast just for <span>$2.99</span> with your booking
-				</h2>
+				</h4>
 				<a
 					href="http://cityhostel.axiomthemes.com/appointment/"
 					class="btn-book"
@@ -356,27 +360,165 @@
 		<section class="section photo">
 			<h1 class="heading">Photogallery</h1>
 			<h4>our accommodations</h4>
+			<div class="photo__lightbox">
+				<img src="" alt="" />
+				<button><i class="fa-solid fa-x"></i></button>
+			</div>
 			<div class="photo__gallery">
-				<img
-					src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-13.jpg"
-					alt=""
-				/>
-				<img
-					src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-14.jpg"
-					alt=""
-				/><img
-					src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-15.jpg"
-					alt=""
-				/><img
-					src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-16.jpg"
-					alt=""
-				/><img
-					src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-17.jpg"
-					alt=""
-				/><img
-					src="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-18.jpg"
-					alt=""
-				/>
+				<a
+					data-href="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-13.jpg"
+					class="photo__img"
+				>
+					<i class="fa-solid fa-magnifying-glass-plus"></i></a
+				><a
+					data-href="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-14.jpg"
+					class="photo__img"
+				>
+					<i class="fa-solid fa-magnifying-glass-plus"></i></a
+				><a
+					data-href="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-15.jpg"
+					class="photo__img"
+				>
+					<i class="fa-solid fa-magnifying-glass-plus"></i></a
+				><a
+					data-href="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-16.jpg"
+					class="photo__img"
+				>
+					<i class="fa-solid fa-magnifying-glass-plus"></i></a
+				><a
+					data-href="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-17.jpg"
+					class="photo__img"
+				>
+					<i class="fa-solid fa-magnifying-glass-plus"></i></a
+				><a
+					data-href="http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/post-18.jpg"
+					class="photo__img"
+					><i class="fa-solid fa-magnifying-glass-plus"></i
+				></a>
+			</div>
+		</section>
+		<section class="section team">
+			<h1 class="heading heading--white animate animate__fadeInDown">
+				Our team
+			</h1>
+			<h4 class="animate animate__fadeInUp">meet the team</h4>
+			<div class="team__member">
+				<div class="team__info">
+					<div class="team__name">
+						<h3 class="animate animate__fadeInLeft">jessica&nbsp;gilmor</h3>
+						<p class="animate animate__fadeInRight">receptionist</p>
+					</div>
+					<div class="team__sci animate animate__fadeInDown">
+						<a href="https://www.facebook.com/AxiomThemes/" target="_blank"
+							><i class="fa-brands fa-facebook-f"></i>
+						</a>
+						<a href="https://www.instagram.com/axiom_themes/" target="_blank"
+							><i class="fa-brands fa-instagram"></i>
+						</a>
+						<a href="https://twitter.com/axiom_themes" target="_blank"
+							><i class="fa-brands fa-twitter"></i>
+						</a>
+					</div>
+				</div>
+				<p class="team__description animate disable animate__fadeInUp">
+					Jessica Gilmor joined our team in 2010. We are all about East London!
+					Our accommodation is the talk of the town and is ideal for guests who
+					want to be part of the creative and cutting-edge world that is East
+				</p>
+				<div class="team__avatar">
+					<img
+						src="http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/team1.png"
+						alt="team 1"
+					/><img
+						src="http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/team2.png"
+						alt="team 2"
+					/><img
+						src="http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/team3.png"
+						alt="team 3"
+					/><img
+						src="http://cityhostel.axiomthemes.com/wp-content/uploads/2017/01/team4.png"
+						alt="team 4"
+					/>
+				</div>
+			</div>
+		</section>
+		<section class="section articles">
+			<h1 class="heading">Articles</h1>
+			<h4>blog feed</h4>
+			<div class="articles__carousel">
+				<div class="post">
+					<a
+						href="https://cityhostel.axiomthemes.com/unknown-spots-to-relax-in-new-lenox/"
+						class="post__preview"
+					></a>
+					<div class="post__content">
+						<h4 class="post__date">dec 22, 2016</h4>
+						<a
+							href="https://cityhostel.axiomthemes.com/unknown-spots-to-relax-in-new-lenox/"
+							class="post__title"
+							>Unknown Spots to Relax in New Lenox</a
+						>
+						<div class="post__reaction">
+							<h4 class="post__comments">1</h4>
+							<h4 class="post__likes">3</h4>
+						</div>
+					</div>
+				</div>
+				<div class="post">
+					<a
+						href="https://cityhostel.axiomthemes.com/the-backpackers-guide-to-south-africa/"
+						class="post__preview"
+					></a>
+					<div class="post__content">
+						<h4 class="post__date">nov 11, 2016</h4>
+						<a
+							href="https://cityhostel.axiomthemes.com/the-backpackers-guide-to-south-africa/"
+							class="post__title"
+							>The Backpacker's Guide to South Africa</a
+						>
+						<div class="post__reaction">
+							<h4 class="post__comments">3</h4>
+							<h4 class="post__likes">2</h4>
+						</div>
+					</div>
+				</div>
+				<div class="post">
+					<a
+						href="https://cityhostel.axiomthemes.com/travel-experiences-that-are-way-better-for-you/"
+						class="post__preview"
+					></a>
+					<div class="post__content">
+						<h4 class="post__date">oct 16, 2016</h4>
+						<a
+							href="https://cityhostel.axiomthemes.com/travel-experiences-that-are-way-better-for-you/"
+							class="post__title"
+						>
+							Travel Experiences that are Way Better for You
+						</a>
+						<div class="post__reaction">
+							<h4 class="post__comments">0</h4>
+							<h4 class="post__likes">10</h4>
+						</div>
+					</div>
+				</div>
+				<div class="post">
+					<a
+						href="https://cityhostel.axiomthemes.com/business-travellers-opinion/"
+						class="post__preview"
+					></a>
+					<div class="post__content">
+						<h4 class="post__date">dec 22, 2016</h4>
+						<a
+							href="https://cityhostel.axiomthemes.com/business-travellers-opinion/"
+							class="post__title"
+							>Business Traveler's Opinion</a
+						>
+						<div class="post__reaction">
+							<h4 class="post__comments">2</h4>
+							<h4 class="post__likes">25</h4>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<script src="main.js"></script>

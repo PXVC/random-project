@@ -1,5 +1,7 @@
+const htmlTag = document.querySelector("html");
 const loader = document.querySelector(".loader");
 const btnScrollTop = document.querySelector(".btn-scroll-to-top");
+const animateElements = document.querySelectorAll(".animate");
 
 const navWrapper = document.querySelector(".nav-wrapper");
 const nav = navWrapper.querySelector("nav");
@@ -13,21 +15,22 @@ const headerH2 = header.querySelector("h2");
 const headerH3 = header.querySelectorAll("h3");
 const headerBtn = header.querySelector("a");
 
-window.addEventListener("beforeunload", () => {
-	window.scrollTo(0, 0);
-});
+const photo = document.querySelector(".photo");
+const photoImg = photo.querySelectorAll(".photo__gallery a");
+const imgIcon = photo.querySelectorAll("i");
+
+const photoLightbox = document.querySelector(".photo__lightbox");
+const photoLightboxImg = photoLightbox.querySelector("img");
+const lightboxBtn = photoLightbox.querySelector("button");
 
 window.addEventListener("load", () => {
-	loader.style.opacity = 0;
+	loader.style.display = "none";
 	setTimeout(() => {
 		loader.style.zIndex = -999;
 	}, 5000);
-	headerH1.classList.remove("disable");
-	headerH2.classList.remove("disable");
-	headerH3.forEach((h3) => {
-		h3.classList.remove("disable");
+	animateElements.forEach((ele) => {
+		ele.classList.remove("disable");
 	});
-	headerBtn.classList.remove("disable");
 });
 
 window.addEventListener("scroll", () => {
@@ -37,6 +40,7 @@ window.addEventListener("scroll", () => {
 	);
 	if (nav.classList.contains("sticky")) {
 		btnScrollTop.style.display = "block";
+		htmlTag.style.scrollBehavior = "smooth";
 	} else {
 		btnScrollTop.style.display = "none";
 	}
@@ -50,10 +54,6 @@ menuBtn.addEventListener("click", () => {
 		menuIcon.classList.remove("fa-x");
 		menuIcon.classList.add("fa-bars");
 	}
-});
-
-btnScrollTop.addEventListener("click", () => {
-	document.documentElement.scrollTop = 0;
 });
 
 let currentImgIndex = 1;
@@ -86,3 +86,20 @@ setInterval(() => {
 	}
 	currentImgIndex += currentImgIndex < 4 ? 1 : -3;
 }, 10000);
+
+photoImg.forEach((img, i) => {
+	img.style.gridArea = "img-" + (i + 1);
+	img.style.background =
+		'url("' + img.dataset.href + '") center / cover no-repeat';
+});
+
+imgIcon.forEach((icon, i) => {
+	icon.addEventListener("click", () => {
+		photoLightbox.classList.add("open");
+		photoLightbox.querySelector("img").src = photoImg[i - 1].dataset.href;
+
+		lightboxBtn.addEventListener("click", () => {
+			photoLightbox.classList.remove("open");
+		});
+	});
+});

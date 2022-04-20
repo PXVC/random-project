@@ -1,0 +1,863 @@
+/* =================================================================
+                    * Booking section *
+================================================================ */
+
+.booking {
+	background-color: $green;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 240px;
+
+	h2 {
+		color: #fff;
+		font-family: "Sansita One", "Sansita", sans-serif;
+		font-size: 45px;
+		font-weight: 400;
+	}
+
+	.btn-group {
+		display: flex;
+		column-gap: 10px;
+
+		* {
+			width: 151.16px;
+			text-transform: uppercase;
+			font-family: "Oswald", sans-serif;
+			color: $gray;
+			padding: 14.4px 16.8px 14.4px 27.6px;
+			height: 71.39px;
+			font-weight: 700;
+			font-size: 12px;
+			letter-spacing: 2px;
+			border: none;
+			outline: 1px solid transparent;
+			transition: outline 0.2s;
+		}
+
+		input {
+			&:hover,
+			&:focus {
+				outline: 2px solid $yellow;
+			}
+		}
+
+		select {
+			-webkit-appearance: none;
+
+			&:hover,
+			&:focus {
+				outline: 2px solid $yellow;
+			}
+		}
+
+		button {
+			width: max-content;
+			letter-spacing: 0;
+			padding: 19.2px 31.2px 16.8px;
+			background-image: linear-gradient(to right, $yellow 50%, $black 50%);
+			background-position: right;
+			background-size: 300%;
+			color: #fff;
+			cursor: pointer;
+			transition: background-position 0.5s, color 0.5s;
+
+			&:hover {
+				background-position: left;
+				color: $black;
+			}
+		}
+	}
+
+	.selection {
+		position: relative;
+		padding: 0;
+
+		&::after {
+			content: "▼";
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 80%;
+			transform: translate(-80%, -50%);
+			font-size: 10px;
+			background-color: $yellow;
+			color: $black;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			font-weight: 900;
+		}
+	}
+}
+
+/* =================================================================
+                      * Introduction *
+================================================================ */
+
+.intro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100%;
+	background-color: $light-gray;
+
+	.intro-bg {
+		transform: translateX(-30%);
+		background-position: cover;
+	}
+
+	.content-wrapper {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		padding: 50px;
+		color: $gray;
+	}
+
+	.content {
+		width: min-content;
+
+		h4 {
+			margin-top: 13.2px;
+			margin-bottom: 27.3px;
+		}
+
+		p {
+			font: 14px "PT Serif", serif;
+			line-height: 24.01px;
+		}
+	}
+
+	.badge {
+		margin-left: 20px;
+	}
+
+	.btn-info {
+		width: max-content;
+		margin-top: 80%;
+		transform: translateX(-130%);
+		font: 700 12px "Oswald", sans-serif;
+		letter-spacing: 3px;
+		padding: 25.8px 78px 27.6px;
+		background: linear-gradient(to right, $yellow 50%, $black 50%) right / 300%;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+		cursor: pointer;
+		transition: background-position 0.7s, color 0.7s;
+
+		&:hover {
+			background-position: left;
+			color: $black;
+		}
+	}
+}
+
+/* =================================================================
+                  * Accommodations section *
+================================================================ */
+
+.accommodations {
+	text-align: center;
+	margin-top: 130px;
+
+	&__group {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 100px;
+		grid-template-rows: auto;
+		justify-items: center;
+		margin: 0 70px;
+	}
+
+	.room {
+		background-color: $light-gray;
+
+		img {
+			width: 100%;
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			row-gap: 15.2px;
+			justify-content: center;
+			align-items: center;
+			padding: 54.6px 81.2px 61.6px;
+			font: 400 14px "Oswald", sans-serif;
+
+			a {
+				text-decoration: none;
+
+				&:first-child {
+					color: $black;
+					font-size: 20px;
+					text-transform: uppercase;
+					transition: color 0.3s ease;
+
+					&:hover {
+						color: $orange;
+					}
+				}
+
+				&:last-child {
+					width: max-content;
+					text-align: center;
+					letter-spacing: 3px;
+					text-transform: uppercase;
+					font-size: 12px;
+					font-weight: 700;
+					padding: 18.6px 10.3px 17.4px;
+					background-image: linear-gradient(to right, $yellow 50%, $black 50%);
+					background-position: right;
+					background-size: 300%;
+					color: #fff;
+					cursor: pointer;
+					transition: background-position 0.6s, color 0.6s;
+
+					&:hover {
+						background-position: left;
+						color: $black;
+					}
+				}
+			}
+
+			h3 {
+				font-family: "PT Serif", serif;
+				font-weight: 400;
+				line-height: 18.9px;
+				max-width: 100px;
+				text-align: right;
+				color: $gray;
+			}
+		}
+	}
+
+	.price-wrapper {
+		display: flex;
+	}
+
+	.price {
+		color: $orange;
+		font-weight: 400;
+		font-size: 35px;
+		margin-left: 10px;
+	}
+}
+
+/* =================================================================
+                      * Testimonials *
+================================================================ */
+
+.testimonials {
+	color: #fff;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	column-gap: 50px;
+	padding: 100px 0;
+
+	h3 {
+		font-size: 14px;
+		text-transform: uppercase;
+		word-spacing: 3px;
+	}
+
+	img {
+		border-radius: 50%;
+	}
+
+	&__score {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+
+		h1 {
+			font: 70px "Oswald", sans-serif;
+			color: $orange;
+			background-color: #fff;
+			border-radius: 50%;
+			padding: 45px 55px;
+		}
+	}
+
+	&__content {
+		width: 429px;
+
+		h3 {
+			color: $yellow;
+			letter-spacing: 2px;
+			margin: 50px 0 30px;
+		}
+
+		p {
+			font: 20px "PT Serif", serif;
+			line-height: 28px;
+		}
+	}
+}
+
+/* =================================================================
+                        * Facilities section *
+================================================================ */
+
+.facilities {
+	text-align: center;
+	margin: 110px 0 200px;
+
+	&__services-group {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.row {
+		display: flex;
+		column-gap: 70px;
+		align-content: center;
+
+		&:last-child {
+			transform: translateY(70px);
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			row-gap: 30px;
+			text-decoration: none;
+
+			i {
+				font-size: 54.6px;
+				background-color: $yellow;
+				width: 1.777em;
+				height: 1.777em;
+				padding-top: 0.4em;
+				text-align: center;
+				color: $black;
+				border-radius: 50%;
+				transition: color 0.3s, background-color 0.3s;
+
+				&:hover {
+					color: #fff;
+					background-color: $black;
+				}
+			}
+
+			p {
+				color: $black;
+				text-decoration: none;
+				font: 700 14px "Oswald", sans-serif;
+				text-transform: uppercase;
+				letter-spacing: 0.6px;
+				transition: color 0.3s ease;
+			}
+		}
+	}
+}
+
+/* =================================================================
+                  * Breakfast feature section *
+================================================================ */
+
+.breakfast-feature {
+	background: url("http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/promo_bg.jpg?id=268")
+		center / cover no-repeat;
+	height: 100vh;
+	color: #fff;
+	font-family: "Oswald", sans-serif;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	&__content {
+		width: min-content;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap: 30px;
+	}
+
+	h1 {
+		font-size: 100px;
+		width: min-content;
+	}
+
+	h4 {
+		color: #fff;
+		text-transform: uppercase;
+		line-height: 26px;
+
+		span {
+			color: $yellow;
+		}
+	}
+
+	div:last-child {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: $orange;
+		width: 10em;
+		height: 10em;
+		border-radius: 50%;
+
+		p {
+			font-size: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 4.8px;
+		}
+
+		h4 {
+			font-size: 35px;
+			font-weight: 400;
+			color: $yellow;
+		}
+	}
+
+	.btn-book {
+		background: linear-gradient(to left, $yellow 50%, transparent 50%) right;
+		background-size: 201%;
+		color: $black;
+		text-decoration: none;
+		padding: 25px 78px 27px;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 3px;
+		border: 2px solid $yellow;
+		box-sizing: content-box;
+		transition: color 0.3s, background-position 0.3s;
+
+		&:hover {
+			background-position: left;
+			color: $yellow;
+		}
+	}
+}
+
+/* =================================================================
+                        * Photo gallery *
+================================================================ */
+
+.photo {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__lightbox {
+		visibility: hidden;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		background-color: #444349cc;
+		width: 100%;
+		height: 100vh;
+		transition: opacity 0.2s;
+
+		&.open {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		button {
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 40px;
+			height: 40px;
+			font-size: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $light-gray;
+			border: none;
+			background-color: #000;
+			text-decoration: none;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform: scale(0.8);
+		}
+	}
+
+	&__gallery {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		grid-template-areas:
+			"img-1 img-2 img-3"
+			"img-4 img-2 img-6"
+			"img-4 img-2 img-6"
+			"img-4 img-2 img-6"
+			"img-4 img-2 img-6"
+			"img-4 img-5 img-6";
+		grid-gap: 30px;
+		width: 1000px;
+	}
+
+	&__img {
+		position: relative;
+		width: 100%;
+		min-height: 15rem;
+		box-shadow: 1px 1px gainsboro;
+
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: $black;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			transition: opacity 0.17s ease;
+		}
+
+		i {
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			transform: translate(-50%, -150%);
+			opacity: 0;
+			font-size: 16px;
+			color: $light-gray;
+			background-color: $orange;
+			padding: 18px;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: transform 0.3s, opacity 0.2s;
+		}
+
+		&:hover {
+			&::before {
+				opacity: 0.7;
+			}
+
+			i {
+				transform: translate(-50%, -50%);
+				opacity: 1;
+
+				&:hover {
+					background-color: #fe7259;
+				}
+			}
+		}
+	}
+}
+
+/* =================================================================
+                        * Team introduce *
+================================================================ */
+
+.team {
+	$self: &;
+	background: url("https://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/team_member_bg1.jpg")
+		center / cover no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 100px;
+	/* 
+	* {
+		animation-iteration-count: infinite;
+	} */
+
+	h3 {
+		color: #fff;
+		font-weight: 400;
+		text-transform: uppercase;
+		width: min-content;
+	}
+
+	h4 {
+		color: #fff;
+	}
+
+	p.animate__fadeInRight {
+		font-family: "Sansita One", sans-serif;
+		font-size: 17px;
+		text-transform: capitalize;
+		color: $yellow;
+	}
+
+	a {
+		background-color: $orange;
+		color: #fff;
+		border: 2px solid transparent;
+		padding: 13px;
+		margin-right: 7px;
+		text-decoration: none;
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: transparent;
+			border-color: $orange;
+			color: $orange;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		column-gap: 80px;
+
+		#{$self}__name {
+			* {
+				animation-delay: 1s;
+			}
+		}
+	}
+
+	&__description {
+		color: #fff;
+		width: 50%;
+		margin: 30px 0 70px;
+	}
+
+	&__description,
+	&__sci {
+		animation-delay: 2s;
+	}
+
+	&__avatar {
+		display: flex;
+		column-gap: 10px;
+		cursor: pointer;
+
+		img {
+			transition: opacity 0.3s;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}
+
+/* =================================================================
+                        * Articles carousel *
+================================================================ */
+
+.articles {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__carousel {
+		width: min(74%, 1516px);
+		display: flex;
+		justify-content: center;
+		column-gap: 20px;
+		overflow: hidden;
+	}
+}
+
+/* NOTE: this is an article styles */
+
+.post {
+	$self: &;
+	background-color: $light-gray;
+	width: max(20%, 500px);
+	min-width: 500px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100%;
+	transform: translateX(100%);
+	animation: sliding 5s ease-in-out forwards infinite;
+
+	&__preview {
+		background: no-repeat center / cover;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 60px 30px;
+
+		h4 {
+			margin: 0;
+		}
+
+		#{$self}__title {
+			text-transform: uppercase;
+			color: $black;
+			font-family: "Oswald", sans-serif;
+			font-size: 20px;
+			text-decoration: none;
+		}
+
+		#{$self}__reaction {
+			display: flex;
+			align-items: center;
+			column-gap: 30px;
+
+			div {
+				display: flex;
+				justify-content: flex-start;
+				align-items: baseline;
+
+				i {
+					color: #fff;
+					background-color: $orange;
+					padding: 7px;
+					font-size: 15px;
+					border-radius: 50%;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+/* =================================================================
+                        		* Register *
+================================================================ */
+
+.register {
+	text-align: center;
+	padding: 60px;
+
+	h1 {
+		font-size: 52.5px;
+	}
+
+	form {
+		display: flex;
+		justify-content: center;
+		height: 54px;
+		font-size: 16px;
+		margin-top: 30px;
+
+		input {
+			padding: 1rem 1.4rem;
+			font-family: "PT Serif", serif;
+
+			&#email {
+				width: min(100%, 312px);
+				color: $gray;
+				background-color: $light-gray;
+				outline: none;
+				border: 2px solid $light-gray;
+				transition: background-color 0.3s, border-color 0.3s;
+
+				&:hover {
+					background-color: #fff;
+					border-color: $yellow;
+				}
+
+				&:focus {
+					background: #fff;
+					border-color: $orange;
+				}
+			}
+
+			&#btn-submit {
+				background: linear-gradient(to left, $black 50%, $yellow 50%) right /
+					300%;
+				outline: none;
+				border: none;
+				color: #fff;
+				text-transform: uppercase;
+				font-family: "Oswald", sans-serif;
+				font-weight: 700;
+				letter-spacing: 2px;
+				cursor: pointer;
+				transition: background-position 0.6s, color 0.6s;
+
+				&:hover {
+					background-position: left;
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+/* =================================================================
+                        		* Contact section *
+================================================================ */
+
+.contact {
+	display: flex;
+	position: relative;
+	margin: 0 !important;
+
+	h3 {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+
+		i {
+			color: $yellow;
+			font-size: 14px;
+		}
+	}
+
+	.tel p {
+		font-family: "Oswald", sans-serif;
+		font-size: 22px;
+	}
+
+	> div {
+		padding: 100px;
+
+		div {
+			flex-direction: column;
+			align-items: baseline;
+			margin-top: 50px;
+		}
+	}
+
+	iframe {
+		position: absolute;
+		right: 0;
+		width: 50%;
+		height: 85vh;
+	}
+}
+
+@keyframes sliding {
+	0% {
+		transform: translateX(100%);
+	}
+
+	10% {
+		transform: translateX(100%);
+	}
+
+	45% {
+		transform: translateX(0);
+	}
+
+	55% {
+		transform: translateX(0);
+	}
+
+	80% {
+		transform: translateX(-100%);
+	}
+
+	90% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(100%);
+	}
+}

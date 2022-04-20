@@ -1,0 +1,54 @@
+footer {
+	background-color: $light-gray;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 40px 0;
+
+	a {
+		text-decoration: none;
+		transition: all 0.3s;
+	}
+
+	h3 {
+		font-size: 14px;
+		letter-spacing: 2px;
+		margin-right: 20px;
+	}
+
+	h4 {
+		color: $gray;
+		font-weight: 400;
+		font-family: "PT Serif", serif;
+
+		a {
+			color: $gray;
+
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.footer-sci {
+	@extend footer;
+
+	a {
+		font-size: 14px;
+		margin-right: 10px;
+		border: 2px solid $yellow;
+		background-color: $yellow;
+		color: $black;
+		text-align: center;
+		line-height: 43px;
+		width: 43px;
+		height: 43px;
+		border-radius: 50%;
+
+		&:hover {
+			background-color: transparent;
+			color: $yellow;
+		}
+	}
+}

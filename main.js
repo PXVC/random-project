@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
 		loader.style.zIndex = -999;
 	}, 5000);
 	animateElements.forEach((ele) => {
-		ele.classList.remove("disable");
+		ele.style.animationPlayState = "running";
 	});
 });
 

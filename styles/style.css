@@ -8,7 +8,6 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 200vh;
   min-width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
@@ -16,6 +15,9 @@ body {
 
 h3 {
   font-family: "Oswald", sans-serif;
+}
+h3:not(.price-wrapper h3):not(.nav h3) {
+  text-transform: uppercase;
 }
 
 .loader {
@@ -57,6 +59,7 @@ h3 {
 .info,
 .address,
 .tel,
+.email,
 .price-msg {
   display: flex;
   align-items: center;
@@ -76,7 +79,7 @@ h3 {
 .section--green-bg {
   background-color: #8abb6a;
 }
-.section:not(.section--green-bg):not(.intro):not(.breakfast-feature) {
+.section:not(.section--green-bg):not(.intro):not(.breakfast-feature):not(.team) {
   margin: 110px 0 200px;
 }
 .section h4 {
@@ -93,11 +96,8 @@ h3 {
           animation-duration: 0.7s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-.disable {
-  -webkit-animation: none;
-          animation: none;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .nav-wrapper {
@@ -141,12 +141,16 @@ h3 {
 .address,
 .address h3,
 .tel,
-.tel h3 {
+.tel h3,
+.email,
+.email h3 {
+  display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
 
-.address p {
+.address p,
+.email p {
   font-family: "PT Serif", serif;
   color: #928f88;
 }
@@ -250,6 +254,9 @@ header a:hover {
   border: 2px solid #fff;
 }
 
+/* =================================================================
+                    * Booking section *
+================================================================ */
 .booking {
   background-color: #8abb6a;
   display: flex;
@@ -263,13 +270,12 @@ header a:hover {
   font-size: 45px;
   font-weight: 400;
 }
-
-.btn-group {
+.booking .btn-group {
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
-.btn-group * {
+.booking .btn-group * {
   width: 151.16px;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
@@ -283,16 +289,16 @@ header a:hover {
   outline: 1px solid transparent;
   transition: outline 0.2s;
 }
-.btn-group input:hover, .btn-group input:focus {
+.booking .btn-group input:hover, .booking .btn-group input:focus {
   outline: 2px solid #ffdb74;
 }
-.btn-group select {
+.booking .btn-group select {
   -webkit-appearance: none;
 }
-.btn-group select:hover, .btn-group select:focus {
+.booking .btn-group select:hover, .booking .btn-group select:focus {
   outline: 2px solid #ffdb74;
 }
-.btn-group button {
+.booking .btn-group button {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -305,16 +311,15 @@ header a:hover {
   cursor: pointer;
   transition: background-position 0.5s, color 0.5s;
 }
-.btn-group button:hover {
+.booking .btn-group button:hover {
   background-position: left;
   color: #444349;
 }
-
-.selection {
+.booking .selection {
   position: relative;
   padding: 0;
 }
-.selection::after {
+.booking .selection::after {
   content: "▼";
   display: inline-block;
   position: absolute;
@@ -331,19 +336,20 @@ header a:hover {
   font-weight: 900;
 }
 
+/* =================================================================
+                      * Introduction *
+================================================================ */
 .intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100%;
   background-color: #f7f5f2;
 }
-
-.intro-bg {
+.intro .intro-bg {
   transform: translateX(-30%);
   background-position: cover;
 }
-
-.content-wrapper {
+.intro .content-wrapper {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -353,26 +359,23 @@ header a:hover {
   padding: 50px;
   color: #928f88;
 }
-
-.content {
+.intro .content {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
-.content h4 {
+.intro .content h4 {
   margin-top: 13.2px;
   margin-bottom: 27.3px;
 }
-.content p {
+.intro .content p {
   font: 14px "PT Serif", serif;
   line-height: 24.01px;
 }
-
-.badge {
+.intro .badge {
   margin-left: 20px;
 }
-
-.btn-info {
+.intro .btn-info {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -388,16 +391,19 @@ header a:hover {
   cursor: pointer;
   transition: background-position 0.7s, color 0.7s;
 }
-.btn-info:hover {
+.intro .btn-info:hover {
   background-position: left;
   color: #444349;
 }
 
-.rooms {
+/* =================================================================
+                  * Accommodations section *
+================================================================ */
+.accommodations {
   text-align: center;
   margin-top: 130px;
 }
-.rooms__group {
+.accommodations__group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 100px;
@@ -405,14 +411,13 @@ header a:hover {
   justify-items: center;
   margin: 0 70px;
 }
-
-.room {
+.accommodations .room {
   background-color: #f7f5f2;
 }
-.room img {
+.accommodations .room img {
   width: 100%;
 }
-.room__content {
+.accommodations .room__content {
   display: flex;
   flex-direction: column;
   row-gap: 15.2px;
@@ -421,19 +426,19 @@ header a:hover {
   padding: 54.6px 81.2px 61.6px;
   font: 400 14px "Oswald", sans-serif;
 }
-.room__content a {
+.accommodations .room__content a {
   text-decoration: none;
 }
-.room__content a:first-child {
+.accommodations .room__content a:first-child {
   color: #444349;
   font-size: 20px;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
-.room__content a:first-child:hover {
+.accommodations .room__content a:first-child:hover {
   color: #fd7444;
 }
-.room__content a:last-child {
+.accommodations .room__content a:last-child {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -450,11 +455,11 @@ header a:hover {
   cursor: pointer;
   transition: background-position 0.6s, color 0.6s;
 }
-.room__content a:last-child:hover {
+.accommodations .room__content a:last-child:hover {
   background-position: left;
   color: #444349;
 }
-.room__content h3 {
+.accommodations .room__content h3 {
   font-family: "PT Serif", serif;
   font-weight: 400;
   line-height: 18.9px;
@@ -462,18 +467,19 @@ header a:hover {
   text-align: right;
   color: #928f88;
 }
-
-.price-wrapper {
+.accommodations .price-wrapper {
   display: flex;
 }
-
-.price {
+.accommodations .price {
   color: #fd7444;
   font-weight: 400;
   font-size: 35px;
   margin-left: 10px;
 }
 
+/* =================================================================
+                      * Testimonials *
+================================================================ */
 .testimonials {
   color: #fff;
   display: flex;
@@ -517,6 +523,9 @@ header a:hover {
   line-height: 28px;
 }
 
+/* =================================================================
+                        * Facilities section *
+================================================================ */
 .facilities {
   text-align: center;
   margin: 110px 0 200px;
@@ -527,23 +536,22 @@ header a:hover {
   justify-content: center;
   align-items: center;
 }
-
-.row {
+.facilities .row {
   display: flex;
   -moz-column-gap: 70px;
        column-gap: 70px;
   align-content: center;
 }
-.row:last-child {
+.facilities .row:last-child {
   transform: translateY(70px);
 }
-.row__item {
+.facilities .row__item {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
   text-decoration: none;
 }
-.row__item i {
+.facilities .row__item i {
   font-size: 54.6px;
   background-color: #ffdb74;
   width: 1.777em;
@@ -554,11 +562,11 @@ header a:hover {
   border-radius: 50%;
   transition: color 0.3s, background-color 0.3s;
 }
-.row__item i:hover {
+.facilities .row__item i:hover {
   color: #fff;
   background-color: #444349;
 }
-.row__item p {
+.facilities .row__item p {
   color: #444349;
   text-decoration: none;
   font: 700 14px "Oswald", sans-serif;
@@ -567,6 +575,9 @@ header a:hover {
   transition: color 0.3s ease;
 }
 
+/* =================================================================
+                  * Breakfast feature section *
+================================================================ */
 .breakfast-feature {
   background: url("http://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/promo_bg.jpg?id=268") center/cover no-repeat;
   height: 100vh;
@@ -620,8 +631,7 @@ header a:hover {
   font-weight: 400;
   color: #ffdb74;
 }
-
-.btn-book {
+.breakfast-feature .btn-book {
   background: linear-gradient(to left, #ffdb74 50%, transparent 50%) right;
   background-size: 201%;
   color: #444349;
@@ -634,11 +644,14 @@ header a:hover {
   box-sizing: content-box;
   transition: color 0.3s, background-position 0.3s;
 }
-.btn-book:hover {
+.breakfast-feature .btn-book:hover {
   background-position: left;
   color: #ffdb74;
 }
 
+/* =================================================================
+                        * Photo gallery *
+================================================================ */
 .photo {
   text-align: center;
   display: flex;
@@ -735,6 +748,9 @@ header a:hover {
   background-color: #fe7259;
 }
 
+/* =================================================================
+                        * Team introduce *
+================================================================ */
 .team {
   background: url("https://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/team_member_bg1.jpg") center/cover no-repeat;
   display: flex;
@@ -809,6 +825,252 @@ header a:hover {
   opacity: 0.7;
 }
 
-.articles__carousel {
+/* =================================================================
+                        * Articles carousel *
+================================================================ */
+.articles {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.articles__carousel {
+  width: min(74%, 1516px);
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  overflow: hidden;
+}
+
+/* NOTE: this is an article styles */
+.post {
+  background-color: #f7f5f2;
+  width: max(20%, 500px);
+  min-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  transform: translateX(100%);
+  -webkit-animation: sliding 5s ease-in-out forwards infinite;
+          animation: sliding 5s ease-in-out forwards infinite;
+}
+.post__preview {
+  background: no-repeat center/cover;
+}
+.post__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 30px;
+}
+.post__content h4 {
+  margin: 0;
+}
+.post__content .post__title {
+  text-transform: uppercase;
+  color: #444349;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+.post__content .post__reaction {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.post__content .post__reaction div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.post__content .post__reaction div i {
+  color: #fff;
+  background-color: #fd7444;
+  padding: 7px;
+  font-size: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* =================================================================
+                        		* Register *
+================================================================ */
+.register {
+  text-align: center;
+  padding: 60px;
+}
+.register h1 {
+  font-size: 52.5px;
+}
+.register form {
+  display: flex;
+  justify-content: center;
+  height: 54px;
+  font-size: 16px;
+  margin-top: 30px;
+}
+.register form input {
+  padding: 1rem 1.4rem;
+  font-family: "PT Serif", serif;
+}
+.register form input#email {
+  width: min(100%, 312px);
+  color: #928f88;
+  background-color: #f7f5f2;
+  outline: none;
+  border: 2px solid #f7f5f2;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.register form input#email:hover {
+  background-color: #fff;
+  border-color: #ffdb74;
+}
+.register form input#email:focus {
+  background: #fff;
+  border-color: #fd7444;
+}
+.register form input#btn-submit {
+  background: linear-gradient(to left, #444349 50%, #ffdb74 50%) right/300%;
+  outline: none;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-position 0.6s, color 0.6s;
+}
+.register form input#btn-submit:hover {
+  background-position: left;
+  color: #444349;
+}
+
+/* =================================================================
+                        		* Contact section *
+================================================================ */
+.contact {
+  display: flex;
+  position: relative;
+  margin: 0 !important;
+}
+.contact h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contact h3 i {
+  color: #ffdb74;
+  font-size: 14px;
+}
+.contact .tel p {
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+}
+.contact > div {
+  padding: 100px;
+}
+.contact > div div {
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 50px;
+}
+.contact iframe {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 85vh;
+}
+
+@-webkit-keyframes sliding {
+  0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(100%);
+  }
+  45% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(-100%);
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(100%);
+  }
+  45% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(-100%);
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+footer, .footer-sci {
+  background-color: #f7f5f2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 0;
+}
+footer a, .footer-sci a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+footer h3, .footer-sci h3 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-right: 20px;
+}
+footer h4, .footer-sci h4 {
+  color: #928f88;
+  font-weight: 400;
+  font-family: "PT Serif", serif;
+}
+footer h4 a, .footer-sci h4 a {
+  color: #928f88;
+}
+footer h4 a:hover, .footer-sci h4 a:hover {
+  color: #fd7444;
+}
+
+.footer-sci a {
+  font-size: 14px;
+  margin-right: 10px;
+  border: 2px solid #ffdb74;
+  background-color: #ffdb74;
+  color: #444349;
+  text-align: center;
+  line-height: 43px;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+.footer-sci a:hover {
+  background-color: transparent;
+  color: #ffdb74;
 }/*# sourceMappingURL=style.css.map */
